@@ -1,3 +1,28 @@
+// ---- Certificate Modal ----
+function openCertModal(e, el) {
+  e.preventDefault();
+  var url = el.getAttribute('data-cert');
+  document.getElementById('certIframe').src = url;
+  document.getElementById('certModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCertModal(e) {
+  if (e.target === document.getElementById('certModal') || e.currentTarget.classList.contains('cert-modal-close')) {
+    document.getElementById('certModal').classList.remove('open');
+    document.getElementById('certIframe').src = '';
+    document.body.style.overflow = '';
+  }
+}
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    document.getElementById('certModal').classList.remove('open');
+    document.getElementById('certIframe').src = '';
+    document.body.style.overflow = '';
+  }
+});
+
 document.addEventListener('DOMContentLoaded', function () {
 
   // ---- Navbar scroll effect ----

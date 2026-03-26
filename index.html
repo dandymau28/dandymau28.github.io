@@ -445,21 +445,51 @@
   <!-- Projects / Interests Section -->
   <section class="section section-alt" id="projects">
     <div class="container">
-      <h2 class="section-title">What I'm Working On</h2>
+      <h2 class="section-title">Highlighted Projects</h2>
       <div class="projects-grid">
 
         <div class="project-card">
-          <div class="project-icon">&#128274;</div>
-          <h3 class="project-name">Secure Communication Patterns</h3>
+          <div class="project-icon">&#128179;</div>
+          <h3 class="project-name">Payment Integration Service</h3>
           <p class="project-desc">
-            Implementing RSA-based encryption for frontend-backend communication. Focusing on
-            key exchange mechanisms, payload encryption, and building trust layers without
-            sacrificing developer experience.
+            Building payment integration services at Durianpay. Designing reliable
+            payment processing pipelines with focus on consistency, idempotency,
+            and fault tolerance across multiple payment channels.
           </p>
           <div class="project-tags">
-            <span class="tag">Security</span>
-            <span class="tag">RSA</span>
-            <span class="tag">Cryptography</span>
+            <span class="tag">Golang</span>
+            <span class="tag">Payments</span>
+            <span class="tag">High Throughput</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">&#127915;</div>
+          <h3 class="project-name">QR E-Ticketing System</h3>
+          <p class="project-desc">
+            Built QR code-based e-ticketing APIs for KCI transportation handling
+            <strong>5k+ RPS</strong>. Managed ticket generation, validation, and gate system
+            integration with focus on low-latency responses and high availability during peak hours.
+          </p>
+          <div class="project-tags">
+            <span class="tag">API Design</span>
+            <span class="tag">QR Code</span>
+            <span class="tag">Transportation</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">&#9992;</div>
+          <h3 class="project-name">Flight Booking Engine Migration</h3>
+          <p class="project-desc">
+            Migrated flight booking engine from PHP to Golang, improving performance
+            and scalability. Redesigned service architecture while ensuring zero downtime
+            during the transition and maintaining backward compatibility with existing systems.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Golang</span>
+            <span class="tag">PHP</span>
+            <span class="tag">Migration</span>
           </div>
         </div>
 
@@ -475,21 +505,6 @@
             <span class="tag">React Native</span>
             <span class="tag">CDN</span>
             <span class="tag">OTA</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-icon">&#127915;</div>
-          <h3 class="project-name">QR E-Ticketing System</h3>
-          <p class="project-desc">
-            Built QR code-based e-ticketing APIs for LRT transportation. Handled ticket generation,
-            validation, and redemption flows with focus on low-latency responses and high
-            availability during peak hours.
-          </p>
-          <div class="project-tags">
-            <span class="tag">API Design</span>
-            <span class="tag">QR Code</span>
-            <span class="tag">Transportation</span>
           </div>
         </div>
 
@@ -530,18 +545,26 @@
             Certifications
           </h3>
           <div class="cert-list">
-            <div class="cert-item">
+            <a class="cert-item cert-link" href="#" data-cert="https://www.hackerrank.com/certificates/iframe/fe3d50f72bf0" onclick="openCertModal(event, this)">
               <span class="cert-badge">HackerRank</span>
               <span class="cert-name">Go (Basic)</span>
-            </div>
-            <div class="cert-item">
+              <span class="cert-view">View</span>
+            </a>
+            <a class="cert-item cert-link" href="#" data-cert="https://www.hackerrank.com/certificates/iframe/b9511008742a" onclick="openCertModal(event, this)">
               <span class="cert-badge">HackerRank</span>
               <span class="cert-name">SQL (Intermediate)</span>
-            </div>
-            <div class="cert-item">
+              <span class="cert-view">View</span>
+            </a>
+            <a class="cert-item cert-link" href="#" data-cert="https://www.hackerrank.com/certificates/iframe/be61614bd8ea" onclick="openCertModal(event, this)">
               <span class="cert-badge">HackerRank</span>
               <span class="cert-name">Problem Solving (Basic)</span>
-            </div>
+              <span class="cert-view">View</span>
+            </a>
+            <a class="cert-item cert-link" href="https://www.virtualbadge.io/certificate-validator?credential=c7dccd11-baa1-44b9-aee1-3eb083ae141b" target="_blank" rel="noopener">
+              <span class="cert-badge">HackJakarta</span>
+              <span class="cert-name">Participation</span>
+              <span class="cert-view">View</span>
+            </a>
             <div class="cert-item">
               <span class="cert-badge">Kominfo</span>
               <span class="cert-name">Data Science DigiTalent Scholarship</span>
@@ -581,6 +604,15 @@
       </div>
     </div>
   </section>
+
+  <!-- Certificate Modal -->
+  <div class="cert-modal" id="certModal" onclick="closeCertModal(event)">
+    <div class="cert-modal-content">
+      <button class="cert-modal-close" onclick="closeCertModal(event)">&times;</button>
+      <iframe id="certIframe" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <p class="cert-modal-hint">Click anywhere outside to close</p>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">

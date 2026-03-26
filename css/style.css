@@ -758,6 +758,105 @@ img {
 }
 
 
+.cert-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cert-link:hover {
+  border-color: var(--accent);
+}
+
+.cert-view {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.cert-item:hover .cert-view {
+  opacity: 1;
+}
+
+/* Certificate Modal */
+
+.cert-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+}
+
+.cert-modal.open {
+  display: flex;
+  cursor: pointer;
+}
+
+.cert-modal-content {
+  cursor: default;
+}
+
+.cert-modal-hint {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+}
+
+.cert-modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 700px;
+  height: 500px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.cert-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  z-index: 10;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  font-size: 1.4rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+}
+
+.cert-modal-close:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.cert-modal-content iframe {
+  width: 100%;
+  height: 100%;
+}
+
+
 /* ============================================
    Contact Section
    ============================================ */
